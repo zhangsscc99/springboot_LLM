@@ -1,0 +1,13 @@
+com\example\applechat\config\SimpleOpenAIClient.class
+com\example\applechat\config\WebSocketConfig.class
+com\example\applechat\controller\ChatController.class
+com\example\applechat\model\ChatMessage$MessageType.class
+com\example\applechat\service\BotService.class
+com\example\applechat\model\ChatMessage.class
+com\example\applechat\model\ChatRequest.class
+com\example\applechat\model\Message.class
+com\example\applechat\service\AIChatService$OpenAIApi.class
+com\example\applechat\AppleChatApplication.class
+com\example\applechat\service\AIChatService.class
+com\example\applechat\config\OpenAIClientConfig.class
+com\example\applechat\config\AIConfig.class

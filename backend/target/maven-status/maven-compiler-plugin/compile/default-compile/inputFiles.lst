@@ -1,0 +1,11 @@
+C:\Users\zhang\apple-chat-app\backend\src\main\java\com\example\applechat\AppleChatApplication.java
+C:\Users\zhang\apple-chat-app\backend\src\main\java\com\example\applechat\config\AIConfig.java
+C:\Users\zhang\apple-chat-app\backend\src\main\java\com\example\applechat\service\AIChatService.java
+C:\Users\zhang\apple-chat-app\backend\src\main\java\com\example\applechat\model\Message.java
+C:\Users\zhang\apple-chat-app\backend\src\main\java\com\example\applechat\controller\ChatController.java
+C:\Users\zhang\apple-chat-app\backend\src\main\java\com\example\applechat\service\BotService.java
+C:\Users\zhang\apple-chat-app\backend\src\main\java\com\example\applechat\config\SimpleOpenAIClient.java
+C:\Users\zhang\apple-chat-app\backend\src\main\java\com\example\applechat\model\ChatRequest.java
+C:\Users\zhang\apple-chat-app\backend\src\main\java\com\example\applechat\config\WebSocketConfig.java
+C:\Users\zhang\apple-chat-app\backend\src\main\java\com\example\applechat\config\OpenAIClientConfig.java
+C:\Users\zhang\apple-chat-app\backend\src\main\java\com\example\applechat\model\ChatMessage.java
