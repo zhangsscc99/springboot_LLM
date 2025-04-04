@@ -62,6 +62,27 @@ function Chat() {
     setMessageText('');
     setIsLoading(true);
     
+    // 检测特定的身份询问问题并提供固定回答
+    const identityQuestions = ["你是谁", "你是什么", "你叫什么", "你叫什么名字", "你的名字是什么", "介绍一下你自己", "你是哪个AI"];
+    const lowerCaseMsg = messageText.toLowerCase();
+    
+    // 检查是否是在询问身份
+    const isAskingIdentity = identityQuestions.some(q => lowerCaseMsg.includes(q));
+    
+    if (isAskingIdentity) {
+      // 如果是询问身份，直接返回预设回答
+      setTimeout(() => {
+        setMessages(prevMessages => [...prevMessages, {
+          id: Date.now() + 1,
+          text: "我是一个专业的情感心理助手，擅长解答用户的情感困惑、提供情感心理咨询。",
+          sender: 'ai',
+          timestamp: new Date().toLocaleTimeString()
+        }]);
+        setIsLoading(false);
+      }, 500);
+      return;
+    }
+    
     try {
       // 准备发送到API的消息
       const messages = [
@@ -133,7 +154,7 @@ function Chat() {
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1>聊天助手Chat Assistant</h1>
+        <h1>情感心理助手</h1>
         <div className="user-controls">
           {user ? (
             <>

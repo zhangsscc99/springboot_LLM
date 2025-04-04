@@ -75,7 +75,7 @@ function ChatDetail() {
           title = '聊天记录';
           mockMessages = [
             { id: 1, text: '这是一个新的聊天', sender: 'user', timestamp: '12:00:00' },
-            { id: 2, text: '欢迎使用聊天助手！有什么我可以帮助您的？', sender: 'ai', timestamp: '12:00:15' }
+            { id: 2, text: '欢迎使用情感心理助手！我可以帮助你解答情感困惑、提供情感咨询，或者帮你想出吸引心仪对象的话术。请告诉我你遇到了什么情感问题？', sender: 'ai', timestamp: '12:00:15' }
           ];
         }
         
@@ -104,6 +104,27 @@ function ChatDetail() {
     setMessages(prevMessages => [...prevMessages, userMessage]);
     setMessageText('');
     setIsLoading(true);
+    
+    // 检测特定的身份询问问题并提供固定回答
+    const identityQuestions = ["你是谁", "你是什么", "你叫什么", "你叫什么名字", "你的名字是什么", "介绍一下你自己", "你是哪个AI"];
+    const lowerCaseMsg = messageText.toLowerCase();
+    
+    // 检查是否是在询问身份
+    const isAskingIdentity = identityQuestions.some(q => lowerCaseMsg.includes(q));
+    
+    if (isAskingIdentity) {
+      // 如果是询问身份，直接返回预设回答
+      setTimeout(() => {
+        setMessages(prevMessages => [...prevMessages, {
+          id: Date.now() + 1,
+          text: "我是一个专业的情感心理助手，擅长解答用户的情感困惑、提供情感心理咨询。",
+          sender: 'ai',
+          timestamp: new Date().toLocaleTimeString()
+        }]);
+        setIsLoading(false);
+      }, 500);
+      return;
+    }
     
     try {
       // 准备发送到API的消息

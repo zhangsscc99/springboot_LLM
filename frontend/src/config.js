@@ -4,7 +4,7 @@ const config = {
   API_BASE_URL: 'http://localhost:8081',
   
   // 其他全局配置
-  APP_NAME: '聊天助手',
+  APP_NAME: '情感心理助手',
   
   // 超时设置（毫秒）
   FETCH_TIMEOUT: 10000,
