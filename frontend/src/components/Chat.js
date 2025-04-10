@@ -46,6 +46,10 @@ function Chat() {
     navigate('/register');
   };
 
+  const handleBackToHome = () => {
+    navigate('/');
+  };
+
   const handleSendMessage = async (e) => {
     e.preventDefault();
     if (messageText.trim() === '') return;
@@ -154,7 +158,12 @@ function Chat() {
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1>情感心理助手</h1>
+        <div className="header-left">
+          <button className="back-button" onClick={handleBackToHome}>
+            <span>←</span> 返回首页
+          </button>
+          <h1>锦书情辞助手</h1>
+        </div>
         <div className="user-controls">
           {user ? (
             <>

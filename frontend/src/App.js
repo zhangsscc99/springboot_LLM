@@ -5,6 +5,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import ChatHistory from './components/ChatHistory';
 import ChatDetail from './components/ChatDetail';
+import HomePage from './components/HomePage';
 import './App.css';
 
 // 检查用户是否已认证
@@ -24,8 +25,11 @@ const ProtectedRoute = ({ children }) => {
 function App() {
   return (
       <Routes>
-        {/* 首页 - 聊天页面(不需要登录) */}
-        <Route path="/" element={<Chat />} />
+        {/* 首页 - 锦书情辞主页面(不需要登录) */}
+        <Route path="/" element={<HomePage />} />
+        
+        {/* 聊天页面(不需要登录) */}
+        <Route path="/chat" element={<Chat />} />
         
         {/* 登录页面 */}
         <Route path="/login" element={<Login />} />
